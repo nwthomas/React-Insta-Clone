@@ -2,6 +2,7 @@ import React from "react";
 import LogoLink from "./LogoLink";
 import SearchField from "./SearchField";
 import Icons from "./Icons";
+import PropTypes from "prop-types";
 import "./_SearchBar.scss";
 
 const SearchBarContainer = props => {
@@ -27,4 +28,12 @@ const SearchBarContainer = props => {
     </div>
   );
 };
+
+SearchBarContainer.propTypes = {
+  isTop: PropTypes.bool,
+  searchText: PropTypes.string,
+  searchOnChange: PropTypes.func,
+  logout: PropTypes.func
+};
+
 export default SearchBarContainer;
