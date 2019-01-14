@@ -77,6 +77,66 @@ const dummyData = [
         text: "I like how Half Dome looks so old and useless"
       }
     ]
+  },
+  {
+    username: "jshoemaker",
+    thumbnailUrl:
+      "https://media1.popsugar-assets.com/files/thumbor/4pA9G0Iqd9NkAzTGprztye_AbRI/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/03/06/145/n/4852708/739b036ebaf0da9d_10986022_1536428393289696_1441506879_n/i/Hot-Men-Coffee-Instagram-Pictures.jpg",
+    imageUrl: "http://blog.ink361.com/wp-content/uploads/2015/02/jcgolfing.jpg",
+    likes: 389,
+    timestamp: "July 20th 2017, 10:32:10 am",
+    comments: [
+      {
+        username: "jshoemaker",
+        text: "This shot makes me feel at peace!"
+      },
+      {
+        username: "awaywetravel",
+        text: "Next time, please take me with you!"
+      },
+      {
+        username: "awesomebt28",
+        text: "Dude, that's so sick. Nice shot!"
+      }
+    ]
+  },
+  {
+    username: "coffee__nut",
+    thumbnailUrl:
+      "https://www.sequoitmedia.com/wp-content/uploads/2015/03/demi-lovato-2-495.jpg",
+    imageUrl:
+      "https://www.seriouseats.com/2018/06/20180613-coffee-vs-espresso-vicky-wasik-3.jpg",
+    likes: 4871,
+    timestamp: "July 22th 2017, 2:10:58 pm",
+    comments: [
+      {
+        username: "coffee__nut",
+        text: "Man, I'm super thirsty now..."
+      },
+      {
+        username: "awaywetravel",
+        text: "Let's go there on Thursday!"
+      }
+    ]
+  },
+  {
+    username: "_kathycat",
+    thumbnailUrl:
+      "https://secure.gravatar.com/avatar/7d5d1ca9010854c0a1621c24c0dbd599?s=400&d=mm&r=g",
+    imageUrl:
+      "https://scontent-sea1-1.cdninstagram.com/vp/599437e75b6ac0177458da3e3cbabc8b/5C862BA6/t51.2885-15/e35/s480x480/43914931_512004459318294_2707712514895493068_n.jpg",
+    likes: 294,
+    timestamp: "July 24th 2017, 9:57:01 am",
+    comments: [
+      {
+        username: "_kathycat",
+        text: "This was taken right off the pier. I want to learn to surf!"
+      },
+      {
+        username: "coffee__nut",
+        text: "Man, that looks so cool."
+      }
+    ]
   }
 ];
 

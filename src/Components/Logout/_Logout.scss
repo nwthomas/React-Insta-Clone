@@ -1,0 +1,51 @@
+.logout__cover {
+  z-index: 90;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: #f9f9f9;
+
+  p {
+    width: 100%;
+    text-align: center;
+    margin: 200px auto 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .logout__container {
+    margin: 0px auto 0;
+    height: 150px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: white;
+
+    .logout__btn {
+      height: 75px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      border: none;
+      -webkit-appearance: none;
+
+      &:hover {
+        background: #e2e2e2;
+        opacity: 0.5;
+      }
+    }
+
+    .no {
+      border-top: 1px solid #e2e2e2;
+    }
+  }
+}
+
+.logout__cover--hidden {
+  display: none;
+}
