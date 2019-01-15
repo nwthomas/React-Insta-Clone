@@ -2,11 +2,22 @@ import React from "react";
 import Post from "./Post";
 import CommentsSection from "../CommentSection/CommentsSection";
 import PropTypes from "prop-types";
-import "./_Post.scss";
+import styled from "styled-components";
+
+const PostContainerClass = styled.div`
+  max-width: 615px;
+  width: 100%;
+  margin: 0 0 50px 3.2%;
+  z-index: 2;
+
+  @media (max-width: 1000px) {
+    margin: 0 3.2% 50px;
+  }
+`;
 
 const PostContainer = props => {
   return (
-    <div className="post__container">
+    <PostContainerClass>
       {props.dummyDataOnProps.map((post, index) => (
         <div className="post" name={index} key={"fragment" + index}>
           <Post
@@ -31,7 +42,7 @@ const PostContainer = props => {
           />
         </div>
       ))}
-    </div>
+    </PostContainerClass>
   );
 };
 
