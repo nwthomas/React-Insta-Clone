@@ -1,6 +1,6 @@
 import React from "react";
 import Post from "./Post";
-import CommentsSection from "../CommentSection/CommentsSection";
+import { CommentsSection } from "../CommentSection";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
