@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const AsideSectionContainer = props => {
   return (
@@ -62,6 +63,13 @@ const AsideSectionContainer = props => {
       </div>
     </div>
   );
+};
+
+AsideSectionContainer.propTypes = {
+  isTop: PropTypes.bool,
+  userPhoto: PropTypes.string,
+  username: PropTypes.string,
+  fullName: PropTypes.string
 };
 
 export default AsideSectionContainer;

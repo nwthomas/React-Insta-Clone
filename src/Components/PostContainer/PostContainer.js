@@ -36,11 +36,29 @@ const PostContainer = props => {
 };
 
 PostContainer.propTypes = {
-  username: PropTypes.string,
-  thumbnailUrl: PropTypes.string,
-  imageUrl: PropTypes.string,
-  timestamp: PropTypes.string,
-  likes: PropTypes.array
+  dummyDataOnProps: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string.isRequired,
+      thumbnailUrl: PropTypes.string.isRequired,
+      imageUrl: PropTypes.string.isRequired,
+      likes: PropTypes.number.isRequired,
+      timestamp: PropTypes.string.isRequired,
+      comments: PropTypes.arrayOf(
+        PropTypes.shape({
+          username: PropTypes.string,
+          text: PropTypes.string
+        })
+      )
+    })
+  ),
+  selectCommentInput: PropTypes.func.isRequired,
+  addNewComment: PropTypes.func.isRequired,
+  userLiked: PropTypes.arrayOf(PropTypes.bool).isRequired,
+  heartClicked: PropTypes.func,
+  likes: PropTypes.arrayOf(PropTypes.number).isRequired,
+  comments: PropTypes.array,
+  postComment: PropTypes.func.isRequired,
+  inputText: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default PostContainer;

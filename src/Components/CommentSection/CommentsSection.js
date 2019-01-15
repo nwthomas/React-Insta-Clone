@@ -66,10 +66,16 @@ const CommentsSection = props => {
 };
 
 CommentsSection.propTypes = {
+  index: PropTypes.number,
+  heartClick: PropTypes.func,
+  src: PropTypes.string,
+  onClick: PropTypes.func,
+  likes: PropTypes.number,
   username: PropTypes.string,
-  timestamp: PropTypes.string,
   text: PropTypes.string,
-  likes: PropTypes.number
+  timestamp: PropTypes.string,
+  addNewCOmment: PropTypes.func,
+  onChange: PropTypes.func
 };
 
 export default CommentsSection;

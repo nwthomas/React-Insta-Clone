@@ -48,7 +48,7 @@ class App extends Component {
         inputText: commentArr,
         fullName
       });
-    }, 4000);
+    }, 100);
   }
 
   componentWillUnmount() {
