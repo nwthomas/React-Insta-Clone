@@ -26,7 +26,6 @@ const SearchFieldClass = styled.input`
 `;
 
 const SearchField = props => {
-  console.log(props.searchText);
   return (
     <SearchFieldClass
       searchText={props.searchText}
