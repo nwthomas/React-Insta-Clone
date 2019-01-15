@@ -4,7 +4,14 @@ import { Logout } from "./Components/Logout";
 import { PostsPage } from "./Components/PostsPage";
 import { Authenticate } from "./Components/Authentication";
 import dummyData from "./dummy-data";
-import "../src/Components/style/App.scss";
+import { createGlobalStyle } from "styled-components";
+import Reset from "./Components/style/Reset";
+import Global from "./Components/style/GlobalStyles";
+
+const GlobalStyle = createGlobalStyle`
+  ${Reset}
+  ${Global}
+`;
 
 class App extends Component {
   constructor(props) {
@@ -205,51 +212,54 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Fragment>
-          <SearchBarContainer
-            logout={this.logout}
-            isTop={this.state.isTop}
-            searchOnChange={this.searchOnChange}
-            searchText={this.state.searchText}
-          />
-          <Logout
-            isModalTrue={this.state.isModelTrue}
-            logoutModal={this.logoutModal}
-          />
-          {this.state.shownDummyData.length === 0 ? (
-            <div className="loading-img__container">
-              <svg
-                className="loading-img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path d="M336 96c21.2 0 41.3 8.4 56.5 23.5S416 154.8 416 176v160c0 21.2-8.4 41.3-23.5 56.5S357.2 416 336 416H176c-21.2 0-41.3-8.4-56.5-23.5S96 357.2 96 336V176c0-21.2 8.4-41.3 23.5-56.5S154.8 96 176 96h160m0-32H176c-61.6 0-112 50.4-112 112v160c0 61.6 50.4 112 112 112h160c61.6 0 112-50.4 112-112V176c0-61.6-50.4-112-112-112z" />
-                <path d="M360 176c-13.3 0-24-10.7-24-24s10.7-24 24-24c13.2 0 24 10.7 24 24s-10.8 24-24 24zM256 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64m0-32c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96z" />
-              </svg>
-            </div>
-          ) : (
-            <div className="body__content">
-              <PostsPage
-                isTop={this.state.isTop}
-                state={this.state}
-                addNewComment={this.addNewComment}
-                dummyDataOnProps={this.state.shownDummyData}
-                selectCommentInput={this.selectCommentInput}
-                likes={this.state.likes}
-                comments={this.state.comments}
-                userLiked={this.state.userLiked}
-                heartClick={this.heartClick}
-                postComment={this.commentOnChange}
-                inputText={this.state.inputText}
-                username={this.state.username}
-                userPhoto={this.state.userPhoto}
-                fullName={this.state.fullName}
-              />
-            </div>
-          )}
-        </Fragment>
-      </div>
+      <>
+        <GlobalStyle />
+        <div className="App">
+          <Fragment>
+            <SearchBarContainer
+              logout={this.logout}
+              isTop={this.state.isTop}
+              searchOnChange={this.searchOnChange}
+              searchText={this.state.searchText}
+            />
+            <Logout
+              isModalTrue={this.state.isModelTrue}
+              logoutModal={this.logoutModal}
+            />
+            {this.state.shownDummyData.length === 0 ? (
+              <div className="loading-img__container">
+                <svg
+                  className="loading-img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path d="M336 96c21.2 0 41.3 8.4 56.5 23.5S416 154.8 416 176v160c0 21.2-8.4 41.3-23.5 56.5S357.2 416 336 416H176c-21.2 0-41.3-8.4-56.5-23.5S96 357.2 96 336V176c0-21.2 8.4-41.3 23.5-56.5S154.8 96 176 96h160m0-32H176c-61.6 0-112 50.4-112 112v160c0 61.6 50.4 112 112 112h160c61.6 0 112-50.4 112-112V176c0-61.6-50.4-112-112-112z" />
+                  <path d="M360 176c-13.3 0-24-10.7-24-24s10.7-24 24-24c13.2 0 24 10.7 24 24s-10.8 24-24 24zM256 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64m0-32c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96z" />
+                </svg>
+              </div>
+            ) : (
+              <div className="body__content">
+                <PostsPage
+                  isTop={this.state.isTop}
+                  state={this.state}
+                  addNewComment={this.addNewComment}
+                  dummyDataOnProps={this.state.shownDummyData}
+                  selectCommentInput={this.selectCommentInput}
+                  likes={this.state.likes}
+                  comments={this.state.comments}
+                  userLiked={this.state.userLiked}
+                  heartClick={this.heartClick}
+                  postComment={this.commentOnChange}
+                  inputText={this.state.inputText}
+                  username={this.state.username}
+                  userPhoto={this.state.userPhoto}
+                  fullName={this.state.fullName}
+                />
+              </div>
+            )}
+          </Fragment>
+        </div>
+      </>
     );
   }
 }
