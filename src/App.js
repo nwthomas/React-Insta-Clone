@@ -15,7 +15,7 @@ class App extends Component {
       fullName: [],
       inputText: [],
       isTop: true,
-      isModelTrue: false,
+      isModalTrue: false,
       likes: [],
       password: "",
       searchText: "",
@@ -214,7 +214,7 @@ class App extends Component {
             searchText={this.state.searchText}
           />
           <Logout
-            isModelTrue={this.state.isModelTrue}
+            isModalTrue={this.state.isModelTrue}
             logoutModal={this.logoutModal}
           />
           {this.state.shownDummyData.length === 0 ? (

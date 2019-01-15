@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./_Logout.scss";
 
 const Logout = props => {
   return (
     <div
       className={
-        props.isModelTrue
+        props.isModalTrue
           ? "logout__cover"
           : "logout__cover  logout__cover--hidden"
       }
@@ -29,6 +30,11 @@ const Logout = props => {
       </form>
     </div>
   );
+};
+
+Logout.propTypes = {
+  isModalTrue: PropTypes.bool,
+  logoutModal: PropTypes.func
 };
 
 export default Logout;

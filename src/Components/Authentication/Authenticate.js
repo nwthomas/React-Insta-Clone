@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Login } from "../LoginPage";
+import PropTypes from "prop-types";
 
 const Authenticate = App => {
   return class extends Component {
@@ -70,6 +71,14 @@ const Authenticate = App => {
       );
     }
   };
+};
+
+Authenticate.propTypes = {
+  fullName: PropTypes.string,
+  appLogin: PropTypes.func,
+  username: PropTypes.string,
+  password: PropTypes.string,
+  onChange: PropTypes.func
 };
 
 export default Authenticate;
