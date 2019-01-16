@@ -284,6 +284,11 @@ const Login = props => {
   );
 };
 
+Login.defaultProps = {
+  password: null,
+  username: null
+};
+
 Login.propTypes = {
   loginPhones: PropTypes.string,
   instagramNameLogo: PropTypes.string,

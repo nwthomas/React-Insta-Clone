@@ -205,6 +205,12 @@ const AsideSectionContainer = props => {
   );
 };
 
+AsideSectionContainer.defaultProps = {
+  isTop: false,
+  username: "",
+  fullName: ""
+};
+
 AsideSectionContainer.propTypes = {
   isTop: PropTypes.bool,
   userPhoto: PropTypes.string,

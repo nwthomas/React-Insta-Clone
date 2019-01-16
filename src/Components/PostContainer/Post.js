@@ -37,10 +37,6 @@ const PostIcon = styled.div`
     font-size: 1.4rem;
     font-weight: 700;
   }
-
-  :first-child {
-    margin-top: 136px;
-  }
 `;
 
 const Post = props => {
@@ -55,6 +51,10 @@ const Post = props => {
       <img src={props.imageUrl} alt="" />
     </>
   );
+};
+
+Post.defaultProps = {
+  username: ""
 };
 
 Post.prototypes = {

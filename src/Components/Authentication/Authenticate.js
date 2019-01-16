@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import { Login } from "../LoginPage";
 import PropTypes from "prop-types";
+import { createGlobalStyle } from "styled-components";
+import Reset from "../style/Reset";
+import Global from "../style/GlobalStyles";
+
+const GlobalStyle = createGlobalStyle`
+  ${Reset}
+  ${Global}
+`;
 
 const Authenticate = App => {
   return class extends Component {
@@ -58,19 +66,28 @@ const Authenticate = App => {
     };
 
     render() {
-      return this.state.loggedIn === true ? (
+      return this.state.loggedIn ? (
         <App />
       ) : (
-        <Login
-          fullName={this.fullName}
-          appLogin={this.appLogin}
-          username={this.state.username}
-          password={this.state.password}
-          onChange={this.onChange}
-        />
+        <>
+          <GlobalStyle />
+          <Login
+            fullName={this.fullName}
+            appLogin={this.appLogin}
+            username={this.state.username}
+            password={this.state.password}
+            onChange={this.onChange}
+          />
+        </>
       );
     }
   };
+};
+
+Authenticate.defaultProps = {
+  fullName: null,
+  username: null,
+  password: null
 };
 
 Authenticate.propTypes = {

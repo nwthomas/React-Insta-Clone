@@ -30,6 +30,11 @@ const Comment = props => {
   );
 };
 
+Comment.defaultProps = {
+  username: "",
+  text: ""
+};
+
 Comment.propTypes = {
   username: PropTypes.string,
   text: PropTypes.string

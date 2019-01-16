@@ -153,6 +153,7 @@ const CommentsSection = props => {
             value={props.inputText[props.index]}
             type="text"
             name="inputText"
+            className="comment__input"
             placeholder="Add a comment..."
           />
           <div>
@@ -162,6 +163,13 @@ const CommentsSection = props => {
       </CommentBox>
     </CommentsSectionClass>
   );
+};
+
+CommentsSection.defaultProps = {
+  likes: null,
+  username: "",
+  text: "",
+  timestamp: ""
 };
 
 CommentsSection.propTypes = {

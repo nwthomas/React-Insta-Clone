@@ -7,11 +7,11 @@ import styled from "styled-components";
 const PostContainerClass = styled.div`
   max-width: 615px;
   width: 100%;
-  margin: 0 0 50px 3.2%;
+  margin: 86px 0 50px 3.2%;
   z-index: 2;
 
   @media (max-width: 1000px) {
-    margin: 0 3.2% 50px;
+    margin: 80px 3.2% 50px;
   }
 `;
 

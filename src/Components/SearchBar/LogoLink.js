@@ -73,6 +73,10 @@ const LogoLink = props => {
   );
 };
 
+LogoLink.defaultProps = {
+  isTop: false
+};
+
 LogoLink.propTypes = {
   instagramIconLogo: PropTypes.string,
   isTop: PropTypes.bool,

@@ -73,6 +73,10 @@ const Logout = props => {
   );
 };
 
+Logout.defaultProps = {
+  isModalTrue: false
+};
+
 Logout.propTypes = {
   isModalTrue: PropTypes.bool,
   logoutModal: PropTypes.func

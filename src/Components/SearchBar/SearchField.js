@@ -39,6 +39,10 @@ const SearchField = props => {
   );
 };
 
+SearchField.defaultProps = {
+  searchTest: ""
+};
+
 SearchField.propTypes = {
   searchOnChange: PropTypes.func,
   searchText: PropTypes.string

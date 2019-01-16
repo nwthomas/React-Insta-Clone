@@ -72,6 +72,11 @@ const SearchBarContainer = props => {
   );
 };
 
+SearchBarContainer.defaultProps = {
+  isTop: false,
+  searchText: ""
+};
+
 SearchBarContainer.propTypes = {
   isTop: PropTypes.bool,
   searchText: PropTypes.string,
