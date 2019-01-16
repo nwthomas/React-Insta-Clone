@@ -3,6 +3,7 @@ import { SearchBarContainer } from "./Components/SearchBar";
 import { Logout } from "./Components/Logout";
 import { PostsPage } from "./Components/PostsPage";
 import { Authenticate } from "./Components/Authentication";
+import { Login } from "./Components/LoginPage";
 import dummyData from "./dummy-data";
 import { createGlobalStyle } from "styled-components";
 import Reset from "./Components/style/Reset";
@@ -264,4 +265,4 @@ class App extends Component {
   }
 }
 
-export default Authenticate(App);
+export default Authenticate(App)(Login);

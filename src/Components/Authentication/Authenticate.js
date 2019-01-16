@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Login } from "../LoginPage";
 import PropTypes from "prop-types";
 import { createGlobalStyle } from "styled-components";
 import Reset from "../style/Reset";
@@ -10,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   ${Global}
 `;
 
-const Authenticate = App => {
+const Authenticate = FirstComponent => SecondComponent => {
   return class extends Component {
     constructor(props) {
       super(props);
@@ -67,11 +66,11 @@ const Authenticate = App => {
 
     render() {
       return this.state.loggedIn ? (
-        <App />
+        <FirstComponent />
       ) : (
         <>
           <GlobalStyle />
-          <Login
+          <SecondComponent
             fullName={this.fullName}
             appLogin={this.appLogin}
             username={this.state.username}
