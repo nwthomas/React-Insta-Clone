@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   ${Global}
 `;
 
-const Authenticate = FirstComponent => SecondComponent => {
+const authenticate = FirstComponent => SecondComponent => {
   return class extends Component {
     constructor(props) {
       super(props);
@@ -83,13 +83,13 @@ const Authenticate = FirstComponent => SecondComponent => {
   };
 };
 
-Authenticate.defaultProps = {
-  fullName: null,
-  username: null,
-  password: null
+authenticate.defaultProps = {
+  fullName: "",
+  username: "",
+  password: ""
 };
 
-Authenticate.propTypes = {
+authenticate.propTypes = {
   fullName: PropTypes.string,
   appLogin: PropTypes.func,
   username: PropTypes.string,
@@ -97,4 +97,4 @@ Authenticate.propTypes = {
   onChange: PropTypes.func
 };
 
-export default Authenticate;
+export default authenticate;

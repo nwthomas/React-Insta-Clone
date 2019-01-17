@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { SearchBarContainer } from "./Components/SearchBar";
 import { Logout } from "./Components/Logout";
 import { PostsPage } from "./Components/PostsPage";
-import { Authenticate } from "./Components/Authentication";
+import { authenticate } from "./Components/authentication";
 import { Login } from "./Components/LoginPage";
 import dummyData from "./dummy-data";
 import { createGlobalStyle } from "styled-components";
@@ -56,7 +56,7 @@ class App extends Component {
         inputText: commentArr,
         fullName
       });
-    }, 100);
+    }, 3000);
   }
 
   componentWillUnmount() {
@@ -265,4 +265,4 @@ class App extends Component {
   }
 }
 
-export default Authenticate(App)(Login);
+export default authenticate(App)(Login);

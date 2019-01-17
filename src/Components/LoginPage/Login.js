@@ -123,6 +123,7 @@ const LoginForm = styled.form`
     .login__button--active {
       opacity: 1;
     }
+  }
 `;
 
 const OrBlock = styled.div`
@@ -222,7 +223,7 @@ const Login = props => {
             <LoginLogo>
               <img src={instagramNameLogo} alt="Instagram name logo" />
             </LoginLogo>
-            <LoginForm>
+            <LoginForm autoComplete="off">
               <input
                 onChange={props.onChange}
                 value={props.username}
@@ -231,6 +232,7 @@ const Login = props => {
                 type="text"
                 name="login-username"
                 placeholder="Username"
+                required
               />
               <input
                 onChange={props.onChange}
@@ -240,6 +242,7 @@ const Login = props => {
                 type="text"
                 name="login-fullname"
                 placeholder="Full name"
+                required
               />
               <input
                 onChange={props.onChange}
@@ -249,6 +252,7 @@ const Login = props => {
                 type="text"
                 name="login-password"
                 placeholder="Fake password"
+                required
               />
               <input
                 onClick={props.appLogin}
@@ -285,8 +289,8 @@ const Login = props => {
 };
 
 Login.defaultProps = {
-  password: null,
-  username: null
+  password: "",
+  username: ""
 };
 
 Login.propTypes = {
